@@ -90,7 +90,6 @@
 
     },
     mounted() {
-
 //      console.log(document.documentElement.clientHeight)
       this.getMidInfo();
       this.getShopList();
@@ -162,7 +161,7 @@
     },
     destroyed(){
       window.addEventListener('scroll',null)
-    }
+    },
   }
 </script>
 

@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 // import HelloWorld from '@/components/HelloWorld'
 import Detail from '../pages/GoodsDetail.vue'
-import Msg from '../components/Message.vue'
+import Message from '../components/Message.vue'
 import Order from '../pages/Order.vue'
 import Index from '../pages/Index.vue'
 import Home from '../pages/Home.vue'
@@ -12,15 +12,16 @@ import Shop from '../pages/Shop.vue'
 Vue.use(Router)
 
 var router = new Router({
+  mode: 'history',
   routes: [
-    // {
-    //   path: '/',
-    //   // component: resolve => require(['../pages/Home'],resolve),
-    //   component: Home,
-    //   meta: {
-    //     title:'home'
-    //   }
-    // },
+    {
+      path: '/',
+      // component: resolve => require(['../pages/Home'],resolve),
+      component: Home,
+      meta: {
+        title:'home'
+      }
+    },
     {
       path: '/home',
       component: Home
@@ -32,12 +33,16 @@ var router = new Router({
     {
       path: '/order',
       component: Order,
-      children: [
-        {
-          path:'/one',
-          component: Msg
-        }
-      ]
+      // children: [
+      //   {
+      //     path:'one',
+      //     component: Message
+      //   }
+      // ]
+    },
+    {
+      path: '/order/one',
+      component: Message,
     },
     {
       path : '/mine',

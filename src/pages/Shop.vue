@@ -28,7 +28,7 @@
               this.detail = data.body;
             })
         },
-      },
+      }
     }
 </script>
 <style scoped>
